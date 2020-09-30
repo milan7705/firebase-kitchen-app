@@ -1,0 +1,20 @@
+.img-right {
+    background: url(../../assets/home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.custom-form {
+    width: 55%;
+    // position: absolute;
+    // top: 8%;
+    // left: 17%;
+
+    .login-logo {
+        width: 330px;
+        display: block;
+        margin: auto;
+    }
+}
+

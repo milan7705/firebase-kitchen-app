@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+//NAV BAR....................................
+.navbar-custom {
+    // background-color: #a5907e;
+    .nav-toggle-arr {
+        &:after {
+            vertical-align: 2px;
+        }
+    }
+    .custom-nav-dropdown {
+        min-width: 6rem !important;
+    }
+    
+    .icon-det {
+        width: 35px;
+    }
+}
+
+// BOX OR RECEPIE LIST..............................
+
+.recipe-box{
+    cursor: pointer !important;
+    text-decoration: none !important;
+    
+    .rl-img {
+        height: 75px;
+    }
+}
+
+//MEDIA QUERIES..........................................
+
+@media (max-width: 575.98px) {
+    .custom-form {
+        width: 55%;
+        // position: absolute;
+        // top: 8%;
+        // left: 17%;
+    
+        .login-logo {
+            width: 230px !important;
+            display: block;
+            margin: auto;
+        }
+    }
+    
+}

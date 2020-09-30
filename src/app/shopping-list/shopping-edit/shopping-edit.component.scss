@@ -1,0 +1,20 @@
+.custom-p {
+    padding: 0 0 0 10px;
+}
+
+
+@media (max-width: 767.98px) { 
+    .input-sl {
+        display: flex !important;
+        flex-direction: column !important;
+        .custom-p {
+            padding: 0 !important;
+        }
+    }
+    
+}
+        @media (min-width: 768px) { 
+            .custom-amount {
+                width: 50% !important;
+            }
+         }

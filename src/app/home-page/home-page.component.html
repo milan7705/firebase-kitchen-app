@@ -1,0 +1,60 @@
+<div class="row no-gutters">
+  
+  <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center" >
+    <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <form class="custom-form mx-auto" *ngIf = "!isLoading" 
+    #homeForm="ngForm" 
+    (ngSubmit) = "onSubmit(homeForm)" 
+    [formGroup] = "loginFormGroup"
+    >
+      <img
+        src="../../assets/home-icon.png"
+        alt="home"
+        class="login-logo mb-5"
+      />
+      <div class="alert alert-danger text-center" *ngIf="error">
+        <p class="mb-0">{{error}}</p>
+      </div>
+      <div class="form-group pt-5">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          formControlName="email"
+        
+         
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          formControlName="logPass"
+        />
+      </div>
+      <div class="form-group" *ngIf="!isLogin">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          name="confirmpassword"
+          formControlName="confPass"
+        />
+      </div>
+      <div class="col-12 d-flex justify-content-between px-0">
+          <button type="submit" class="btn btn-info" [disabled] = "!homeForm.valid" >{{isLogin ? 'Login' : 'Sign up'}}</button>
+          <button type="button" class="btn btn-info" (click) = "onSwitchMode()">{{isLogin ? 'Switch to Sign up' : 'Switch to Login'}}</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-6 p-0 img-right d-none d-lg-block d-xl-block"></div>
+</div>
